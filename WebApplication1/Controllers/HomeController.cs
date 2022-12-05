@@ -30,7 +30,7 @@ namespace WebApplication1.Controllers
         public ActionResult Welcome(string text)
         {
             ViewBag.Message = "Welcome to "+text;
-
+            ViewBag.message = "Dao nay hoi bi ngao";
             return View();
         }
     }
