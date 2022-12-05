@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebApplication1.Models.Sinhvien>
+@{
+    ViewBag.Title = "Danh sách sinh viên";
+}
+<h2>Danh sách sinh viên</h2>
+<table>
+    <tr>
+        <th>Mã sv</th>
+        <th>Họ tên</th>
+        <th>Tuổi</th>
+        <th>Địa chỉ</th>
+        <th>Mã lớp</th>
+        <th>Chi tiết</th>
+    </tr>
+    @{ foreach (var item in @Model)
+        {
+            <tr class="row-a">
+                <td>@item.masv</td>
+                <td>@item.hoten</td>
+                <td>@item.tuoi</td>
+                <td>@item.diachi</td>
+                <td>@item.malop</td>
+                <td><a href="/truonghoc/chitietsv/@item.masv">Chi tiết</a></td>
+            </tr>
+        }
+    }
+</table>
+

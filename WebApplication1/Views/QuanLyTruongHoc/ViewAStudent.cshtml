@@ -1,0 +1,19 @@
+﻿@model WebApplication1.Models.Sinhvien
+@{
+    ViewBag.Title = "View A Student";
+}
+
+<style type="text/css">
+    label {
+        width: 120px;
+        float: left;
+        margin:0;
+    }
+</style>
+<h2>Thông tin sinh viên</h2>
+<p><label>Mã sinh viên</label>@Model.masv</p>
+<p><label>Họ tên</label>@Model.hoten</p>
+<p><label>Tuổi</label>@Model.tuoi</p>
+<p><label>Địa chỉ</label>@Model.diachi</p>
+<p><label>Mã lớp</label>@Model.malop</p>
+

@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Haui</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/Content/Style.css" type="text/css" />
+
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1 id="logo-text">haui-fict</h1>
+            <h2 id="slogan">lập trình web với asp.net</h2>
+            <div id="header-links">
+                <p> <a href="#/">Home</a> | <a href="#/">Contact</a> | <a href="#/">Site Map</a> </p>
+            </div>
+        </div>
+        <div id="menu">
+            <ul>
+                <li id="current"><a href="/">Home</a></li>
+                <li><a href="/home/about">Giới thiệu</a></li>
+                <li><a href="/home/contact">Liên hệ</a></li>
+                <li><a href="#/">Dịch vụ</a></li>
+                <li><a href="#/">Hỗ trợ</a></li>
+                <li class="last"><a href="#/">Giới thiệu</a></li>
+            </ul>
+        </div>
+        <div id="content-wrap">
+            <div id="sidebar">
+                <h1>Tìm kiếm</h1>
+                <form action="#/" class="searchform">
+                    <p>
+                        <input name="search_query" class="textbox" type="text" />
+                        <input name="search" class="button" value="Search" type="submit" />
+                    </p>
+                </form>
+                <h1>Danh sách các lớp</h1>
+                <ul>
+                    <li><a href="/truonghoc/nhapsv">Thêm 1 sinh viên</a></li>
+                    <li><a href="/truonghoc/xemds">Xem tất cả sinh viên</a></li>
+                    @{Html.RenderAction("CategoryMenu", "QuanLyTruonghoc");}
+                </ul>
+                @*<ul class="sidemenu">
+            <li><a href="#TemplateInfo">Lớp công nghệ thông tin</a></li>
+            <li><a href="#TemplateInfo">Lớp khoa học máy tính</a></li>
+            <li><a href="#SampleTags">Lớp kỹ thuật phần mềm</a></li>
+            <li><a href="#SampleTags">Lớp hệ thống thông tin</a></li>
+        </ul>*@
+                <br />
+                <img src="~/Content/img/b12.jpg" width="200" />
+                <p></p>
+            </div>
+            <div id="main">
+                @RenderBody()
+            </div>
+        </div>
+        <div id="footer">
+            <p>Trường Đại học công nghiệp Hà nội - 298 Cầu Diễn </p>
+        </div>
+    </div>
+</body>
+</html>
